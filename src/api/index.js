@@ -7,7 +7,7 @@ const multer = require("multer");
 const upload = multer({ dest: path.join(__dirname, "../../public/images/") });
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 app.use(express.static(path.join(__dirname, "../../public")));
 app.use(express.json());
 app.use(cors());
